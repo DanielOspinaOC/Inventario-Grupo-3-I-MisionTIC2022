@@ -26,3 +26,8 @@
     padding: 2%;
     display:inline-block;
 }
+
+.dispImage{
+    padding-top: 10px;
+    max-width: 10%;
+}
