@@ -10,16 +10,29 @@
 <body>
     <h1>Modificar un producto</h1>
     <div class="contenedor">
-        <div class="contenedor1"></div>
         <div class="contenedor1">
-                <p>Ingrese la nueva información en los siguientes campos:</p>
-                <p>Identificador del producto: <label for="nombre_producto">546982</label> </p>
-                <p>Nombre:</p>
-                <p>Precio:</p>
-                <p>Cantidad:</p>
-                <p>Descripción:</p>
-                <h3>Subir nueva imagen:</h3>
-                <img src="subir.jpg" width="100";
+            <img src="foto.JPG" alt="descargar" width="400">
+        </div>
+        <div class="contenedor2">
+            <h2>Información actual del producto:</h2>
+            <p>Código del producto: <label for="cod_producto">546982</label> </p>
+            <p>Nombre actual:<label for="nom_producto">Cargador USB Auto-ID</label></p>
+            <p>Precio actual:<label for="precio_producto">$20.000</label></p>
+            <p>Cantidad actual:<label for="cantidad_producto">27</label></p>
+            <p>Descripción actual:<label for="descripcion_producto">Cargador para celulares marca LONIO</label></p>
+        </div>
+        <div class="contenedor3">
+            <form action="">
+            <h2>Nueva información del producto:</h2>
+            <p>Codigo del producto: <label for="codigo_pro">546982</label> </p>
+            <p>Nuevo nombre: <input type="text" id="nombre_pro"></p>
+            <p>Nuevo precio:<input type="number" id="precio_pro"></p>
+            <p>Nueva cantidad:<input type="number" id="cant_pro"></p>
+            <p>Nueva descripción:<input type="text" id="desc_pro"></p>
+            <h3>Subir nueva imagen:</h3> 
+            <img src="subir.jpg" width="100">
+            <button type="submit">Actualizar</button>
+            </form>
         </div>
         
     </div>
