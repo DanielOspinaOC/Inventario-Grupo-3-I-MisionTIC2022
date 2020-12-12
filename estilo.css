@@ -1,0 +1,28 @@
+.contenedor {
+    width:95%;
+    height: 90vh;
+    background-color: rgb(255, 255, 255);
+    padding: 5%;
+    display: inline;
+}
+
+.contenedor1 {
+    width:25%;
+    background-color: rgba(255, 255, 255, 0.938);
+    padding: 2%;
+    display:inline-block;
+}
+
+.contenedor2 {
+    width:25%;
+    background-color: rgba(245, 245, 245, 0.938);
+    padding: 2%;
+    display:inline-block;
+}
+
+.contenedor3 {
+    width:25%;
+    background-color: rgba(245, 245, 245, 0.938);
+    padding: 2%;
+    display:inline-block;
+}
