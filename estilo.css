@@ -31,3 +31,38 @@
     padding-top: 10px;
     max-width: 10%;
 }
+
+.contCrePro {
+    width:25%;
+    background-color: rgba(245, 245, 245, 0.938);
+    height: 60vh;
+    padding: 10%;
+    display:inline-block;
+    position: relative;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+input{
+    border-radius: 10px;
+    border-width: 1px;
+    width: 300px;
+    height: 3vh;
+}
+
+label{
+    color: rgb(32, 30, 30);
+}
+
+h1{
+    font-size: 20px;
+    font-weight: 900;
+    font-family:  'Langar';
+    color: rgb(32, 30, 30);
+    background-color: rgba(209, 205, 205, 0.938);
+    text-align: center;
+}
+
+I{
+    position: static center;
+}
