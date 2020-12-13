@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario | Modificar Producto</title>
 
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
     <h1>Modificar un producto</h1>
     <div class="contenedor">
         <div class="contenedor1">
-            <img src="foto.JPG" alt="descargar" width="400">
+            <img src="img/foto.JPG" alt="descargar" width="400">
         </div>
         <div class="contenedor2">
             <h2>Información actual del producto:</h2>
@@ -30,12 +31,13 @@
             <p>Nueva cantidad:<input type="number" id="cant_pro"></p>
             <p>Nueva descripción:<input type="text" id="desc_pro"></p>
             <h3>Subir nueva imagen:</h3> 
-            <img src="subir.jpg" width="100">
-            <button type="submit">Actualizar</button>
+            <img src="img/subir.jpg" width="100">
+            <button onclick="actualizar()" type="button">Actualizar</button>
             </form>
         </div>
         
+        
     </div>
-    
+    <script src="js/CP.js"></script>
 </body>
 </html>
