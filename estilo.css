@@ -41,6 +41,7 @@
     position: relative;
     border-radius: 10px;
     border-width: 1px;
+    align-content: center;
 }
 
 input{
@@ -61,8 +62,17 @@ h1{
     color: rgb(32, 30, 30);
     background-color: rgba(209, 205, 205, 0.938);
     text-align: center;
+    border-radius: 10px;
+    border-width: 1px;
 }
 
 I{
     position: static center;
+    color:rgba(209, 205, 205, 0.938);
 }
+body {
+    font-family: Arial;
+    background: url("https://cdn.pixabay.com/photo/2014/05/03/00/46/gadgets-336635_960_720.jpg") 50% fixed;
+    background-size: cover;
+    padding: 50px;
+    }
