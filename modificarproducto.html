@@ -24,20 +24,20 @@
         </div>
         -->
         <div class="contenedor3">
-            <form action="">
+            <form id="miform" action="">
             <h2>Nueva información del producto:</h2>
             <p>Codigo del producto: <label for="codigo_pro">546982</label> </p>
-            <p>Nuevo nombre: <label for="nom_producto" class="labe">Cargador USB Auto-ID</label></p>
+            <p>Nombre: <label for="nom_producto" class="labe">Cargador USB Auto-ID</label></p>
             <input class="inpu" type="text" id="nombre_pro">
-            <p>Nuevo precio:<label for="precio_producto" class="labe">$20.000</label></p>
+            <p>Precio:<label for="precio_producto" class="labe">$20.000</label></p>
             <input class="inpu" type="number" id="precio_pro">
-            <p>Nueva cantidad: <label for="cantidad_producto" class="labe">27</label></p>
+            <p>Cantidad: <label for="cantidad_producto" class="labe">27</label></p>
             <input class="inpu" type="number" id="cant_pro">
-            <p>Nueva descripción:<label for="descripcion_producto" class="labe">Cargador para celulares marca LONIO</label></p>
+            <p>Descripción:<label for="descripcion_producto" class="labe">Cargador para celulares marca LONIO</label></p>
             <input class="inpu" type="text" id="desc_pro">
             <h3>Subir nueva imagen:</h3> 
             <img src="img/subir.jpg" width="100">
-            <button onclick="actualizar()" type="button"><a class="btn btn-primary btn-large btn-block" href="#">Actualizar</a></button>
+            <button onclick="actualizar()" type="submit"><a class="btn btn-primary btn-large btn-block" href="#">Actualizar</a></button>
             </form>
         </div>
         
@@ -47,9 +47,11 @@
     <script>
         function actualizar() {
           alert("Se ha modificado la información del producto");
+          document.getElementById("miform").reset();
       }
       </script> 
 </body>
 </html>
+
 
 
