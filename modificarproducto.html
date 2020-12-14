@@ -14,7 +14,7 @@
         <div class="contenedor1">
             <img src="img/foto.JPG" alt="descargar" width="400">
         </div>
-        <div class="contenedor2">
+        <!-- <div class="contenedor2">
             <h2>Información actual del producto:</h2>
             <p>Código del producto: <label for="cod_producto">546982</label> </p>
             <p>Nombre actual:<label for="nom_producto">Cargador USB Auto-ID</label></p>
@@ -22,17 +22,22 @@
             <p>Cantidad actual:<label for="cantidad_producto">27</label></p>
             <p>Descripción actual:<label for="descripcion_producto">Cargador para celulares marca LONIO</label></p>
         </div>
+        -->
         <div class="contenedor3">
             <form action="">
             <h2>Nueva información del producto:</h2>
             <p>Codigo del producto: <label for="codigo_pro">546982</label> </p>
-            <p>Nuevo nombre: <input type="text" id="nombre_pro"></p>
-            <p>Nuevo precio:<input type="number" id="precio_pro"></p>
-            <p>Nueva cantidad:<input type="number" id="cant_pro"></p>
-            <p>Nueva descripción:<input type="text" id="desc_pro"></p>
+            <p>Nuevo nombre: <label for="nom_producto" class="labe">Cargador USB Auto-ID</label></p>
+            <input class="inpu" type="text" id="nombre_pro">
+            <p>Nuevo precio:<label for="precio_producto" class="labe">$20.000</label></p>
+            <input class="inpu" type="number" id="precio_pro">
+            <p>Nueva cantidad: <label for="cantidad_producto" class="labe">27</label></p>
+            <input class="inpu" type="number" id="cant_pro">
+            <p>Nueva descripción:<label for="descripcion_producto" class="labe">Cargador para celulares marca LONIO</label></p>
+            <input class="inpu" type="text" id="desc_pro">
             <h3>Subir nueva imagen:</h3> 
             <img src="img/subir.jpg" width="100">
-            <button onclick="actualizar()" type="button">Actualizar</button>
+            <button onclick="actualizar()" type="button"><a class="btn btn-primary btn-large btn-block" href="#">Actualizar</a></button>
             </form>
         </div>
         
@@ -41,3 +46,4 @@
     <script src="js/CP.js"></script>
 </body>
 </html>
+
