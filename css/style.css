@@ -84,13 +84,13 @@ box-shadow: none;
 .contenedor {
     width:95%;
     background-color: rgb(255, 255, 255);
-    padding: 10px 10px 10px 60px;
+    padding: 20px 20px 20px 60px;
     justify-content: center;
     align-content: center;
 }
 
 .contenedor1 {
-    width:25%;
+    width:45%;
     background-color: rgba(255, 255, 255, 0.938);
     padding: 2%;
     display:inline-block;
@@ -106,14 +106,24 @@ box-shadow: none;
 }
 
 .contenedor3 {
-    width:40%;
+    width:45%;
     background-color: rgba(245, 245, 245, 0.938);
     padding: 2%;
     display:inline-block;
     align-self:baseline;
 }
 
+.labe {
+    color: gray;
+    font-style: oblique;
+}
 
+.inpu {
+    background-color: white;
+    border-color: gray;
+    text-align: left;
+    padding-left: 7px;
+}
 /*Fin de los estilos de Modificar producto*/
 
 
@@ -138,14 +148,27 @@ box-shadow: none;
     left: 400px;
 }
 
+<<<<<<< HEAD
 
 I{
     color:rgba(252, 252, 252, 0.938);
     position: relative;
     top: right;
+=======
+.input{
+    border-radius: 10px;
+    border-width: 1px;
+    width: 350px;
+    height: 3vh;
 }
 
-h1{
+.label{
+    color: rgb(32, 30, 30);
+    margin-top: 0;
+>>>>>>> 1cb8cda0c9683e42430970619aec7171a60a7d1a
+}
+
+.h1{
     font-size: 20px;
     font-weight: 900;
     font-family:  'Langar';
