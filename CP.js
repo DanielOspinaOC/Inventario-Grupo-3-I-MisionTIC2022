@@ -12,3 +12,7 @@ function validarSoloNumeros(){
     }
 }
 boton.addEventListener("click", validarSoloNumeros)
+
+function actualizar() {
+    alert("Se ha modificado la información del producto");
+}
