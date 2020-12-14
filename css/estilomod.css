@@ -2,6 +2,9 @@
 
 /*Estos son los estilos de Modificar producto*/
 
+body {
+font-family: Arial;
+}
 
 .contenedor {
     width:95%;
