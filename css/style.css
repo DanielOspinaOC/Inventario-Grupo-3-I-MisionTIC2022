@@ -7,7 +7,7 @@ box-sizing: border-box;
 }
 body {
 font-family: Arial;
-background: url("https://cdn.pixabay.com/photo/2014/05/03/00/46/gadgets-336635_960_720.jpg") 50% fixed;
+background: url("../img/login.jpg") 50% fixed;
 background-size: cover;
 padding: 50px;
 }
