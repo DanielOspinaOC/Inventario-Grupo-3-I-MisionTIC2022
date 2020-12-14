@@ -148,19 +148,19 @@ box-shadow: none;
     left: 400px;
 }
 
-input{
+.input{
     border-radius: 10px;
     border-width: 1px;
     width: 350px;
     height: 3vh;
 }
 
-label{
+.label{
     color: rgb(32, 30, 30);
     margin-top: 0;
 }
 
-h1{
+.h1{
     font-size: 20px;
     font-weight: 900;
     font-family:  'Langar';
