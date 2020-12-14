@@ -138,16 +138,11 @@ box-shadow: none;
     left: 400px;
 }
 
-input{
-    border-radius: 10px;
-    border-width: 1px;
-    width: 350px;
-    height: 3vh;
-}
 
-label{
-    color: rgb(32, 30, 30);
-    margin-top: 0;
+I{
+    color:rgba(252, 252, 252, 0.938);
+    position: relative;
+    top: right;
 }
 
 h1{
@@ -159,12 +154,7 @@ h1{
     text-align: center;
     border-radius: 10px;
     border-width: 1px;
-}
-
-I{
-    color:rgba(252, 252, 252, 0.938);
-    position: relative;
-    top: right;
+    width: 350px;
 }
 
 body {
@@ -173,16 +163,24 @@ body {
     background-size: cover;
     padding: 100px;
     }
-
-.button:hover {
-    background-color: #45e2e7;
-  }
   
+input{
+    border-radius: 10px;
+    border-width: 1px;
+    width: 350px;
+    height: 4vh;
+}
+    
+label{
+    color: rgb(32, 30, 30);
+    margin-top: 0;
+}
+
 .Guardar {
-    font-size: 12px;
+    font-size: 2px;
     color: rgba(68, 68, 68, 0.897);
     display: block;
     margin-top: 12px;
-    height: 5vh;
+    height: 30vh;
   }
 /*Fin de los estilos de Crear producto*/
