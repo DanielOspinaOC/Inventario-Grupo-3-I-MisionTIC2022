@@ -1,0 +1,61 @@
+
+
+/*Estos son los estilos de Modificar producto*/
+
+
+.contenedor {
+    width:95%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px 20px 20px 60px;
+    justify-content: center;
+    align-content: center;
+}
+
+.contenedor1 {
+    width:45%;
+    background-color: rgba(255, 255, 255, 0.938);
+    padding: 2%;
+    display:inline-block;
+    align-self:baseline;
+}
+
+.contenedor2 {
+    width:25%;
+    background-color: rgba(245, 245, 245, 0.938);
+    padding: 2%;
+    display:inline-block;
+    align-self:baseline;
+}
+
+.contenedor3 {
+    width:45%;
+    background-color: rgba(245, 245, 245, 0.938);
+    padding: 2%;
+    display:inline-block;
+    align-self:baseline;
+}
+
+
+/*Fin de los estilos de Modificar producto*/
+
+.btn {
+  border: 2px solid transparent;
+  background: #3498db96;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background-color: #45e2e7;
+}
+
