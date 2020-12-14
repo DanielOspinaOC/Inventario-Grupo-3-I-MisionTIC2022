@@ -12,3 +12,8 @@ function validarSoloNumeros(){
     }
 }
 boton.addEventListener("click", validarSoloNumeros)
+
+function Salir(){
+    window.close();
+}
+Salir.addEventListener("click", Salir)
