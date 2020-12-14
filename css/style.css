@@ -7,7 +7,7 @@ box-sizing: border-box;
 }
 body {
 font-family: Arial;
-background: url("https://cdn.pixabay.com/photo/2014/05/03/00/46/gadgets-336635_960_720.jpg") 50% fixed;
+background: url("../img/login.jpg") 50% fixed;
 background-size: cover;
 padding: 50px;
 }
@@ -126,6 +126,7 @@ box-shadow: none;
 }
 /*Fin de los estilos de Modificar producto*/
 
+<<<<<<< HEAD
 
 /*Estos son los estilos de CrearProducto*/
 .BarraSuperior {
@@ -209,3 +210,5 @@ label{
     height: 35vh;
   }
 /*Fin de los estilos de Crear producto*/
+=======
+>>>>>>> c291c94756fab7fea7e142e10da19e54b792927c
