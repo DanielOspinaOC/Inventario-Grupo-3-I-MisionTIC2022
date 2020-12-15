@@ -80,21 +80,41 @@ box-shadow: none;
 
 /*Estos son los estilos de Modificar producto*/
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(21, 0, 78);
+  }
+  
+li {
+    float: right;
+  }
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
 
 .contenedor {
-    width:95%;
-    background-color: rgb(255, 255, 255);
+    width:90%;
+    background-color: rgba(255, 255, 255, 0.39);
     padding: 20px 20px 20px 60px;
     justify-content: center;
     align-content: center;
+    align-items: center;
+    align-self: center;
 }
 
 .contenedor1 {
     width:45%;
     background-color: rgba(255, 255, 255, 0.938);
-    padding: 2%;
+    padding: 2px, 2px, 2px, 2px;
     display:inline-block;
-    align-self:baseline;
 }
 
 .contenedor2 {
@@ -102,21 +122,21 @@ box-shadow: none;
     background-color: rgba(245, 245, 245, 0.938);
     padding: 2%;
     display:inline-block;
-    align-self:baseline;
+    justify-content: center;
 }
 
 .contenedor3 {
     width:45%;
-    background-color: rgba(245, 245, 245, 0.938);
+    background-color: rgba(245, 245, 245, 50);
     padding: 2%;
     display:inline-block;
     align-self:baseline;
+    justify-content: center;
 }
 
-.labe {
+.label1 {
     color: gray;
-    font-style: oblique;
-}
+  }
 
 .inpu {
     background-color: white;
@@ -124,6 +144,23 @@ box-shadow: none;
     text-align: left;
     padding-left: 7px;
 }
+
+.btnelim {
+    border: 2px solid transparent;
+    background: #ff0000e3;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+  }
 /*Fin de los estilos de Modificar producto*/
 
 <<<<<<< HEAD
@@ -221,3 +258,4 @@ label{
 /*Fin de los estilos de Crear producto*/
 =======
 >>>>>>> c291c94756fab7fea7e142e10da19e54b792927c
+
