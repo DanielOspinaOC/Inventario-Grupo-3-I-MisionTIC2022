@@ -7,6 +7,8 @@
 
     
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/recuperarapp.js"> </script>
     
 </head>
 <body>
@@ -24,17 +26,9 @@
             <img src="img/foto.JPG" width="400">
         </div>
         
-        <!-- <div class="contenedor2">
-            <h2>Información actual del producto:</h2>
-            <p>Código del producto: <label for="cod_producto">546982</label> </p>
-            <p>Nombre actual:<label for="nom_producto">Cargador USB Auto-ID</label></p>
-            <p>Precio actual:<label for="precio_producto">$20.000</label></p>
-            <p>Cantidad actual:<label for="cantidad_producto">27</label></p>
-            <p>Descripción actual:<label for="descripcion_producto">Cargador para celulares marca LONIO</label></p>
-        </div>
-        -->
         <div class="contenedor3">
-            <form id="miform" action="">
+
+            <form name="form_mod_prod" method="POST" action="" onsubmit="return validarForm()" >
             <h2>Información del producto:</h2>
             <h4 style="color: rgb(77, 77, 117);">Solamente diligencie los campos que desea modificar</h4>
             <p>Codigo del producto: <h3><label for="codigo_pro">546982</label></h3> </p>
@@ -47,34 +41,22 @@
             <p>Descripción:<label for="descripcion_producto" class="label1">Cargador para celulares marca LONIO</label></p>
             <input class="inpu" type="text" id="desc_pro">
             <h3>Subir nueva imagen:</h3> 
-            
             <div class="contenedor2">
                 <img src="img/subir.jpg" width="100">
             </div>
             <div class="contenedor2">
-            <button onclick="actualizar()" class="btn btn">Actualizar</button>
-            <button onclick="eliminar()" class="btn btnelim">Eliminar</button>
+            <input type="submit" class="btn btn" value="Actualizar">
+            <input onclick="eliminar()" class="btn btnelim" value="Eliminar">
             </div>
             
         </form>
         </div>
-        
-        
-        
     </div>
-
-    <script>
-        function actualizar() {
-          alert("Se ha modificado la información del producto");
-          document.getElementById("miform").reset();
-      }
-      function eliminar() {
-          confirm("¿Esta seguro que desea eliminar el producto?");
-          document.getElementById("miform").reset();
-      }
-    </script> 
 </body>
 </html>
+
+
+
 
 
 
