@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario | Crear Producto</title>
+
+    <link rel="stylesheet" href="../static/css/estilo.css">
+</head>
+<body>
+
+    <form class="BarraSuperior">
+        <a class="Home" href="HomeUsuAutenticado.html">Home </a>
+        <a class="btn btn-secundary" onClick="Salir();">|  Salir</a>
+    </form>
+
+    <form class ="contCreUsu" method="GET">
+
+        <h1 class="h1">Por favor ingrese los datos del usuario</h1>
+
+    <div class="contCreUsu-form">
+        <label for="Tipo" class="label">Tipo de Usuario: </label>
+        <input class="input" required type="text" name="" id="Tipo" placeholder="Ingrese el tipo de usuario (Vendedor o Administrador)">
+        <br>
+        <label for="Id" class="label">ID: </label>
+        <input class="input" required type="text" name="" id="Id" placeholder="Ingrese el número de cedula del usuario">
+        <br>
+        <label for="nombreUsu" class="label">Nombre: </label>
+        <input class="input" required type="text" name="" id="nombreUsu" placeholder="Ingrese el nombre del usuario">
+        <br>
+        <label for="correo" class="label">Correo: </label>
+        <input class="input" required type="email" name="" id="correo" placeholder="Ingrese el correo del usuario">
+        <br>
+    </div>  
+    <p>
+        <input type="button" value="Guardar" id="Guardar"/>
+        <script src="../static/js/CU.js"></script>
+    </p>
+</body>
+</html>

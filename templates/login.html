@@ -1,34 +1,33 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventario | Login</title>
-    <link type="text/css" href="./css/style.css" rel="stylesheet" />
-</head>
-<body>
-	<div class="login">
-		<div class="login-screen">
-			<div class="app-title">
-				<h1>Login</h1>
-			</div>
+{% extends "base.html" %}
 
-			<div class="login-form">
-				<div class="control-group">
-				<input type="text" class="login-field" value="" placeholder="Usuario" id="login-name">
-				<label class="login-field-icon fui-user" for="login-name"></label>
-				</div>
+{% block contenido %}
 
-				<div class="control-group">
-				<input type="password" class="login-field" value="" placeholder="Contraseña" id="login-pass">
-				<label class="login-field-icon fui-lock" for="login-pass"></label>
-				</div>
+<div class="login">
+  <div class="login-screen">
+    <div class="app-title">
+      <h1>Login</h1>
+      <form action="/" method="POST" >
+        {{ form.hidden_tag() }}
 
-				<a class="btn btn-primary btn-large btn-block" href="HomeUsuAutenticado.html">Ingresar</a>
-				<a class="login-link" href="./RecuperarClave.html">Recuperar contraseña</a>
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+      </div>
+
+      <div class="login-form">
+        <div class="control-group">
+        {{form.usuario (class="login-field", value="",  placeholder="Usuario", id="login-name")}}
+        <label class="login-field-icon fui-user" for="login-name"></label>
+      </div>
+
+      <div class="control-group">
+      {{form.contraseña( class="login-field", value="", placeholder="Contraseña", id="login-pass")}}
+      <label class="login-field-icon fui-lock" for="login-pass"></label>
+      </div>
+
+      {{form.enviar("btn btn-primary btn-large btn-block", href="HomeUsuAutenticado.html")}}
+      <a class="login-link" href="./RecuperarClave.html">Recuperar contraseña</a>
+    </div>
+  </div>
+</div>
+
+  	
+{% endblock %}
 

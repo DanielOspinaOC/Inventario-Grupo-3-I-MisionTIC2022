@@ -1,4 +1,11 @@
 /*Estos son los estilos de CrearProducto*/
+body {
+    font-family: Arial;
+    background: url("../img/login.jpg") 50% fixed;
+    background-size: cover;
+    padding: 100px;
+}
+
 .BarraSuperior {
     position: absolute;
     top: 50px;
@@ -18,7 +25,19 @@
     top: 50px;
     left: 400px;
 }
-
+.contCreUsu {
+    width:25%;
+    background-color: rgba(255, 255, 255, 0.589);
+    height: 60vh;
+    display:inline-block;
+    border-radius: 10px;
+    border-width: 1px;
+    justify-content: center;
+    padding: 5%;
+    position: absolute;
+    top: 50px;
+    left: 400px;
+}
 .input{
     border-radius: 10px;
     border-width: 1px;
@@ -48,12 +67,6 @@ I{
     top: right;
 }
 
-body {
-    font-family: Arial;
-    background: url("https://cdn.pixabay.com/photo/2014/05/03/00/46/gadgets-336635_960_720.jpg") 50% fixed;
-    background-size: cover;
-    padding: 100px;
-    }
 
 .button:hover {
     background-color: #45e2e7;
@@ -64,6 +77,6 @@ body {
     color: rgba(68, 68, 68, 0.897);
     display: block;
     margin-top: 12px;
-  }
+}
 
 /*Fin de los estilos de Crear producto*/

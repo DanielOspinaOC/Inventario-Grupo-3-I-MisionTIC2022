@@ -50,7 +50,7 @@ border: 2px solid #3498db86;
 box-shadow: none;
 }
 
-.btn {
+.enviar {
   border: 2px solid transparent;
   background: #3498db96;
   color: #ffffff;
@@ -67,7 +67,7 @@ box-shadow: none;
   margin: 0 auto;
 }
 
-.btn:hover {
+.enviar:hover {
   background-color: #45e2e7;
 }
 
@@ -178,97 +178,38 @@ li a {
   }
 /*Fin de los estilos de Modificar producto*/
 
-<<<<<<< HEAD
-
-/*Estos son los estilos de CrearProducto*/
-.BarraSuperior {
-    position: absolute;
-    top: 50px;
-    left: 1000px;
+.rec-screen{
+  background-color: rgba(255, 255, 255, 0.39);
+  padding: 10px ;
+  border-radius: 5px ;
+}
+.rec_title{
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+.recuperarClave{
+  text-align: center;
 }
 
-.contCrePro {
-    width:38%;
-    background-color: rgba(255, 255, 255, 0.589);
-    height: 80vh;
-    display:inline-block;
-    border-radius: 10px;
-    border-width: 1px;
-    justify-content: center;
-    padding: 5%;
-    position: absolute;
-    top: 50px;
-    left: 400px;
+.recuperarClaveButton{
+  border: 2px solid transparent;
+  background: #3498db96;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
 }
 
-<<<<<<< HEAD
-
-I{
-    color:rgba(252, 252, 252, 0.938);
-    position: relative;
-    top: right;
-=======
-.input{
-    border-radius: 10px;
-    border-width: 1px;
-    width: 350px;
-    height: 3vh;
+.recuperarClaveButton:hover {
+  background-color: #45e2e7;
 }
 
-.label{
-    color: rgb(32, 30, 30);
-    margin-top: 0;
->>>>>>> 1cb8cda0c9683e42430970619aec7171a60a7d1a
-}
-
-.h1{
-    font-size: 20px;
-    font-weight: 900;
-    font-family:  'Langar';
-    color: rgb(2, 2, 2);
-    background-color: rgba(209, 205, 205, 0.938);
-    text-align: center;
-    border-radius: 10px;
-    border-width: 1px;
-    width: 350px;
-    height: 5vh;
-    width: 370px;
-}
-
-body {
-    font-family: Arial;
-    background: url("https://cdn.pixabay.com/photo/2014/05/03/00/46/gadgets-336635_960_720.jpg") 50% fixed;
-    background-size: cover;
-    padding: 100px;
-    }
-  
-input{
-    border-radius: 10px;
-    border-width: 1px;
-    width: 370px;
-    height: 4vh;
-}
-    
-label{
-    color: rgb(32, 30, 30);
-    margin-top: 0;
-}
-
-.Guardar {
-    font-size: 2px;
-    color: rgba(68, 68, 68, 0.897);
-    display: block;
-    margin-top: 12px;
-    height: 35vh;
-  }
-.recuperarClave {
-    margin: 20px auto;
-    width: 300px
-    background-color: rgba(255, 255, 255, 0.39);
-    padding: 20px;
-    border-radius: 5px
-    }
-/*Fin de los estilos de Crear producto*/
-=======
->>>>>>> c291c94756fab7fea7e142e10da19e54b792927c
 

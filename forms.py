@@ -16,5 +16,10 @@ class FormRegistrarUsuario(FlaskForm):
     contraseña = PasswordField('Contraseña', validators=[DataRequired(message='No dejar vacío, completar')])
     enviar = SubmitField('Registrar')
 
+class FormLogin(FlaskForm):
+    usuario = StringField('Usuario', validators=[DataRequired(message='No dejar vacío, completar')])
+    contraseña = PasswordField('Contraseña', validators=[DataRequired(message='No dejar vacío, completar')])
+    enviar = SubmitField('Ingresar')
+
 
 

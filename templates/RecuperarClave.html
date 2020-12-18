@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecuperarClave</title>
-    <link rel="stylesheet" href="main01.css" type="text/css">
-    <script src="js/recuperarapp.js"> </script>
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css">
+    
+    <script src="../static/js/recuperarapp.js"> </script>
 </head>
 <body>
-    <form action="login.html">
-        <br><br><br><br><br><br><br><br>
-      <fieldset>
-        <legend>Recuperar Contraseña</legend>
-    <div class="recuperarClave">
-        <h5 >Introduzca su correo eletrónico para recuperar contraseña</h5>
-        <label for="e-mail">E-mail</label>
-        <input required type="email" name="user e-mail" id = "email" >
-    </div>
-    <br>
-    <div>
-        <button class="recuperarClave">Restablecer</button>
-    </div>
+    <div class="rec-screen">
+        <form action="login.html">
+            
+        <div class="rec_title">
+            <h1>Recuperar Contraseña</h1>
+        </div>
+        <div class="recuperarClave">
+            <h5 >Introduzca su correo eletrónico para recuperar contraseña</h5>
+            <label for="e-mail">E-mail</label>
+            <input required type="email" name="user e-mail" id = "email" >
+        </div>
+        <br>
+        <div>
+            <button class="recuperarClaveButton">Restablecer</button>
+        </div>
 
-      </fieldset>
-    </form>
+        </fieldset>
+        </form>
+    </div>
 </body>
 </html>
