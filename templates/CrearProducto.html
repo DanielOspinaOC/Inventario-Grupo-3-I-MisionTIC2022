@@ -1,49 +1,45 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventario | Crear Producto</title>
+{% extends "base.html" %}
 
-    <link rel="stylesheet" href="../static/css/estilo.css">
-</head>
-<body>
+{% block contenido %}
 
     <form class="BarraSuperior">
-        <a class="Home" href="HomeUsuAutenticado.html">Home </a>
-        <a class="btn btn-secundary" onClick="Salir();">|  Salir</a>
+        <a class="Home" href="/login/">Home </a>
+        
     </form>
+    
+    <form action ="contCrePro" method="GET">
 
-    <form class ="contCrePro" method="GET">
-
+        {{ form.hidden_tag() }}
         <h1 class="h1">Por favor ingrese los datos del producto</h1>
 
     <div class="contCrePro-form">
         <label for="Cat" class="label">Categoria: </label>
-        <input class="input" required type="text" name="" id="Cat" placeholder="Ingrese la categoria a la que pertenece el producto">
+        {{form.categoria (type="text",  id="Cat", placeholder="Ingrese la categoria a la que pertenece el producto")}}
         <br>
         <label for="Ref" class="label">Referencia: </label>
-        <input class="input" required type="text" name="" id="Ref" placeholder="Ingrese la referencia del producto">
+        {{form.referencia (type="text",  id="Ref", placeholder="Ingrese la referencia del producto")}}
         <br>
         <label for="nomProd" class="label">Nombre: </label>
-        <input class="input" required type="text" name="" id="nomProd" placeholder="Ingrese el nombre del producto">
+        {{form.nombre (type="text",  id="nomProd", placeholder="Ingrese el nombre del producto")}}
         <br>
         <label for="precio" class="label">Precio: </label>
-        <input class="input" required type="precio" name="" id="precio" placeholder="Ingrese el precio unitario del producto">
+        {{form.precio (type="precio",  id="precio", placeholder="Ingrese el precio unitario del producto")}}
         <br>
         <label for = "cantidad" class="label">Cantidad: </label>
-        <input class="input" type="cantidad" name="" id="cantidad" placeholder="Ingrese la cantidad del producto"> 
+        {{form.cantidad (type="cantidad", id="cantidad", placeholder="Ingrese la cantidad del producto")}} 
         <br>
         <label for = "descrip" class="label">Descripción: </label>
-        <input class="input" type="descrip" name="" id="descrip" placeholder="Ingrese detalladamente la descripción del producto"> 
+        {{form.descripcion (type="descrip", id="descrip", placeholder="Ingrese detalladamente la descripción del producto")}} 
         <br>
         <label for = "imagenp" class="label">Imagen: </label>
         <input class="input" type="imagenp" name="" id="imagenp" placeholder="Ingrese la url de imagen del producto"> 
         <br>
     </div>  
+
     <p>
-        <input type="button" value="Guardar" id="Guardar"/>
+        {{form.actualizar(class="btn btn-primary btn-large btn-block")}}
         <script src="../static/js/CP.js"></script>
     </p>
-</body>
-</html>
+
+
+{% endblock %}

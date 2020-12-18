@@ -50,7 +50,7 @@ border: 2px solid #3498db86;
 box-shadow: none;
 }
 
-.enviar {
+.btn {
   border: 2px solid transparent;
   background: #3498db96;
   color: #ffffff;
@@ -67,7 +67,7 @@ box-shadow: none;
   margin: 0 auto;
 }
 
-.enviar:hover {
+.btn:hover {
   background-color: #45e2e7;
 }
 

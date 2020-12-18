@@ -6,24 +6,25 @@
   <div class="login-screen">
     <div class="app-title">
       <h1>Login</h1>
-      <form action="/" method="POST" >
+      <form action="" method="post" >
         {{ form.hidden_tag() }}
 
-      </div>
+      
 
       <div class="login-form">
         <div class="control-group">
-        {{form.usuario (class="login-field", value="",  placeholder="Usuario", id="login-name")}}
-        <label class="login-field-icon fui-user" for="login-name"></label>
-      </div>
+          <label class="login-field-icon fui-user" for="login-name"></label>
+          {{form.usuario (class="login-field", value="",  placeholder="Usuario", id="login-name")}}
+        
+        </div>
 
-      <div class="control-group">
-      {{form.contraseña( class="login-field", value="", placeholder="Contraseña", id="login-pass")}}
-      <label class="login-field-icon fui-lock" for="login-pass"></label>
-      </div>
+        <div class="control-group">
+          <label class="login-field-icon fui-lock" for="login-pass"></label>
+          {{form.contraseña( class="login-field", value="", placeholder="Contraseña", id="login-pass")}}
+        </div>
 
-      {{form.enviar("btn btn-primary btn-large btn-block", href="HomeUsuAutenticado.html")}}
-      <a class="login-link" href="./RecuperarClave.html">Recuperar contraseña</a>
+        {{form.enviar(class="btn btn-primary btn-large btn-block")}}
+        <a class="login-link" href="./RecuperarClave.html">Recuperar contraseña</a>
     </div>
   </div>
 </div>

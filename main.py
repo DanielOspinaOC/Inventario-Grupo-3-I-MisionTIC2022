@@ -1,6 +1,6 @@
 from flask import Flask, render_template, flash
 
-from forms import FormLogin, FormModificarProducto, FormRegistrarUsuario
+from forms import FormLogin, FormModificarProducto, FormRegistrarUsuario, FormRegistrarProducto
 
 
 
@@ -16,5 +16,23 @@ def login():
     form=FormLogin()
     if form.validate_on_submit():
         return (render_template("HomeUsuAutenticado.html"))
+        
     return render_template("login.html", form=form)
 
+@app.route('/HomeUsuAutenticado/')
+def home():
+    return render_template("HomeUsuAtenticado.html")
+
+@app.route('/CrearProducto/',methods=("GET","POST"))
+def CrearProducto():
+    form=FormRegistrarProducto()
+    if form.validate_on_submit():
+        return (render_template("CrearProducto.html"))
+    return render_template("CrearProducto.html",form=form)
+
+@app.route('/CrearUsuario/',methods=("GET","POST"))
+def CrearUsuario():
+    form=FormRegistrarUsuario()
+    if form.validate_on_submit():
+        return (render_template("CrearUsuario.html"))
+    return render_template("CrearUsuario.html",form=form)
