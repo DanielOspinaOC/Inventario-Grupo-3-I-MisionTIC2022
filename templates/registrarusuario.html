@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block contenido %}  
+
+<ul>
+    <li><a href="login.html">Log out </a></li>
+    <li><a href="CrearProducto.html">Agregar Producto</a></li>
+    <li><a href="Home.html">Home</a></li>
+</ul>
+
+<h1 style="color: white;">Registrar usuario</h1>
+
+<div class="contenedor4">
+    <div class="contenedor2">
+        <form name="form_reg_usu" method="POST" action="" onsubmit="return validarFormReg()" >
+        <h2>Información del nuevo usuario</h2>
+        <h4 style="color: rgb(77, 77, 117);">A continuación, diligencie todos los campos:</h4>
+        <p>Nombre:</p><input class="inpu" type="text" id="newname" required>            
+        <p>Email::</p><input class="inpu" type="email" id="newemail" required>
+        <p>Usuario:</p><input class="inpu" type="text" id="newuser" required>
+        <p>Contraseña::</p><input class="inpu" type="password" id="password" required> 
+        <img src="{{ url_for('static', filename= 'img/ojo.png') }} " width="25px" onclick="mostrarPassword()" onmouseout="ocultarPassword()">
+        <div class="contenedor2">
+            <br>
+            <input type="submit" class="btn btn" value="Registrar">
+        </div>
+    </form>
+    </div>  
+</div>
+{% endblock %}
+
+
+
+
+

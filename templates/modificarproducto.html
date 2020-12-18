@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block contenido %}  
+
+<ul>
+    <li><a href="login.html">Log out </a></li>
+    <li><a href="CrearProducto.html">Agregar Producto</a></li>
+    <li><a href="Home.html">Home</a></li>
+</ul>
+
+<h1 style="color: white;">Modificar un producto</h1>
+<div class="contenedor">
+    <div class="contenedor1">
+        <img src="{{ url_for('static', filename='img/foto.JPG')}}" width="400">
+    </div>
+        
+    <div class="contenedor3">
+
+        <form name="form_mod_prod" method="POST" action="" onsubmit="return validarForm()" >
+            <h2>Información del producto:</h2>
+
+            <h4 style="color: rgb(77, 77, 117);">Solamente diligencie los campos que desea modificar</h4>
+
+            <p>Codigo del producto: <h3><label for="codigo_pro">546982</label></h3> </p>
+
+            <p>Nombre: <label for="nom_producto" class="label1">Cargador USB Auto-ID</label></p>
+            <input class="inpu" type="text" id="nombre_pro">
+
+            <p>Precio:<label for="precio_producto" class="label1">$20.000</label></p>
+            <input class="inpu" type="number" id="precio_pro">
+
+            <p>Cantidad: <label for="cantidad_producto" class="label1">27</label></p>
+            <input class="inpu" type="number" id="cant_pro">
+
+            <p>Descripción:<label for="descripcion_producto" class="label1">Cargador para celulares marca LONIO</label></p>
+            <input class="inpu" type="text" id="desc_pro">
+
+            <h3>Subir nueva imagen:</h3> 
+            <div class="contenedor2">
+                <img src="{{ url_for ('static', filename='img/subir.jpg')}}" width="100">
+            </div>
+            <div class="contenedor2">
+            <input type="submit" class="btn btn" value="Actualizar">
+            <input onclick="eliminar()" class="btn btnelim" value="Eliminar">
+            </div>
+            
+        </form>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+
+
+
