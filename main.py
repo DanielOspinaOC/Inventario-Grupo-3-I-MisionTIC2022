@@ -1,6 +1,9 @@
-from flask import Flask, render_template, flash, request
+from flask import Flask, render_template, flash, request, redirect
 
 from forms import FormLogin, FormModificarProducto, FormRegistrarUsuario, FormRegistrarProducto, FormRecuperar
+
+import sqlite3
+import os
 
 
 app = Flask(__name__)
@@ -34,11 +37,22 @@ def home():
 @app.route('/CrearProducto/',methods=("GET","POST"))
 def CrearProducto():
     form=FormRegistrarProducto()
-    if form.validate_on_submit():
-        sql_agregar_producto(form.codigo.data, form.nombre.data, form.precio.data, form.cantidad.data, form.descripcion.data)
-        flash("producto creado")
-        return redirect(request.url)
-    return render_template("CrearProducto.html",form=form)
+    if request.method == 'POST':
+        if form.validate_on_submit():
+            conection = sqlite3.connect('Inventario.db')
+            cursor = conection.cursor()
+            codigo = form.codigo.data
+            nombre = form.nombre.data
+            precio = form.precio.data
+            cantidad = form.cantidad.data
+            descripcion = form.descripcion.data
+            cursor.execute("INSERT INTO productos (codigo, nombre, precio, cantidad, descripcion) VALUES (?, ?, ?, ?, ?)", (codigo, nombre, precio, cantidad, descripcion))
+            conection.commit()
+            conection.close()
+            flash("Se ha agregado el producto satisfactoriamente")
+            return redirect(url_for('añadirproducto'))
+    else:
+        return render_template('CrearProducto.html', form = form)
 
 @app.route('/CrearUsuario/',methods=("GET","POST"))
 def CrearUsuario():
