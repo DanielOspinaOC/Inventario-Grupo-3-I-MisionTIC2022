@@ -10,13 +10,12 @@ class FormModificarProducto (FlaskForm):
     actualizar = SubmitField('Actualizar')
 
 class FormRegistrarProducto (FlaskForm):
+    codigo = StringField('codigo',validators=[DataRequired(message='No dejar vacío, completar')])
     nombre = StringField('nombre',validators=[DataRequired(message='No dejar vacío, completar')])
     precio = StringField('precio', validators=[DataRequired(message='No dejar vacío, completar')])
     cantidad = StringField('cantidad', validators=[DataRequired(message='No dejar vacío, completar')])
     descripcion = StringField('descripcion', validators=[DataRequired(message='No dejar vacío, completar')])
-    categoria = StringField('categoria',validators=[DataRequired(message='No dejar vacío, completar')])
-    referencia = StringField('referencia',validators=[DataRequired(message='No dejar vacío, completar')])
-    actualizar = SubmitField('Actualizar')    
+    registrar = SubmitField('registrar')    
 
 class FormRegistrarUsuario(FlaskForm):
     nombre = StringField('Nombre', validators=[DataRequired(message='No dejar vacío, completar')])
@@ -29,6 +28,12 @@ class FormLogin(FlaskForm):
     usuario = StringField('Usuario', validators=[DataRequired(message='No dejar vacío, completar')])
     contraseña = PasswordField('Contraseña', validators=[DataRequired(message='No dejar vacío, completar')])
     enviar = SubmitField('Ingresar')
+
+
+
+
+
+
 
 
 

@@ -1,7 +1,7 @@
 
 body {
     font-family: Arial;
-    background: url("../img/login.jpg") 20% fixed;
+    background: url("../img/login.jpg")  20% fixed;
     background-size: cover;
     padding: 3px;}
 
@@ -59,10 +59,7 @@ font-size: 25px;
     box-sizing: border-box;
 }
 
-body{
-    background-color: #eee;
-    font-family: 'open sans', sans-serif;
-}
+
 
 .container{
   width: 90%;

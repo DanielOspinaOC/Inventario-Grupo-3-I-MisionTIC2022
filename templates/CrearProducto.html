@@ -1,45 +1,50 @@
 {% extends "base.html" %}
 
-{% block contenido %}
+{% block contenido %}  
 
-    <form class="BarraSuperior">
-        <a class="Home" href="/login/">Home </a>
-        
-    </form>
+
+<h1 style="color: white ; margin: 0px 500px;">Registrar un producto</h1>
+
     
-    <form action ="contCrePro" method="GET">
+        
+    <div class="contenedor3" style="margin: 10px 500px ; ">
 
-        {{ form.hidden_tag() }}
-        <h1 class="h1">Por favor ingrese los datos del producto</h1>
+        <form method="POST" action="/">
+            {{ form.hidden_tag() }}
+            <h2>Información del producto:</h2>
 
-    <div class="contCrePro-form">
-        <label for="Cat" class="label">Categoria: </label>
-        {{form.categoria (type="text",  id="Cat", placeholder="Ingrese la categoria a la que pertenece el producto")}}
-        <br>
-        <label for="Ref" class="label">Referencia: </label>
-        {{form.referencia (type="text",  id="Ref", placeholder="Ingrese la referencia del producto")}}
-        <br>
-        <label for="nomProd" class="label">Nombre: </label>
-        {{form.nombre (type="text",  id="nomProd", placeholder="Ingrese el nombre del producto")}}
-        <br>
-        <label for="precio" class="label">Precio: </label>
-        {{form.precio (type="precio",  id="precio", placeholder="Ingrese el precio unitario del producto")}}
-        <br>
-        <label for = "cantidad" class="label">Cantidad: </label>
-        {{form.cantidad (type="cantidad", id="cantidad", placeholder="Ingrese la cantidad del producto")}} 
-        <br>
-        <label for = "descrip" class="label">Descripción: </label>
-        {{form.descripcion (type="descrip", id="descrip", placeholder="Ingrese detalladamente la descripción del producto")}} 
-        <br>
-        <label for = "imagenp" class="label">Imagen: </label>
-        <input class="input" type="imagenp" name="" id="imagenp" placeholder="Ingrese la url de imagen del producto"> 
-        <br>
-    </div>  
+            <p>Codigo del producto:</p>
+            {{ form.nombre (class="inpu")}}
 
-    <p>
-        {{form.actualizar(class="btn btn-primary btn-large btn-block")}}
-        <script src="../static/js/CP.js"></script>
-    </p>
+            <p>Nombre:</p>
+            {{ form.nombre (class="inpu")}}
 
+            <p>Precio:</p>
+            {{ form.precio (class="inpu")}}
+
+            <p>Cantidad: </p>
+            {{ form.cantidad (class="inpu")}}
+
+            <p>Descripción:</p>
+            {{ form.descripcion (class="inpu")}}
+
+            <h3>Subir nueva imagen:</h3> 
+            <div class="contenedor2">
+                <img src="{{ url_for ('static', filename='img/subir.jpg')}}" width="100">
+            </div>
+
+            <div class="contenedor2">
+
+            {{form.registrar(class="btn btn-primary btn-large btn-block")}}            
+        </form>
+        </div>
+    </div>
 
 {% endblock %}
+
+
+
+
+
+
+

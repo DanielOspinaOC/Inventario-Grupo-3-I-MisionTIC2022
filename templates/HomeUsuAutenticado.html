@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-    <link rel="stylesheet" href="../static/css/estilosH.css">
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block contenido %} 
   <div id="menu">
      <ul>
      <li> <a href="/CrearUsuario/">Crear Usuario </a></li>
@@ -87,5 +81,4 @@
     </div>    
     <a class="login-link" href="./modificarproducto.html">Consultar</a> 
 
-</body>
-</html>
+{% endblock %}
