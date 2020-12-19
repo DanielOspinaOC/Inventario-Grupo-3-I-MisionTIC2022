@@ -1,6 +1,6 @@
 from flask import Flask, render_template, flash, request
 
-from forms import FormLogin, FormModificarProducto, FormRegistrarUsuario, FormRegistrarProducto
+from forms import FormLogin, FormModificarProducto, FormRegistrarUsuario, FormRegistrarProducto, FormRecuperar
 
 
 app = Flask(__name__)
@@ -17,9 +17,19 @@ def login():
         
     return render_template("login.html", form=form)
 
+@app.route('/RecuperarClave/',methods=("GET","POST"))
+def RecuperarClave():
+    form=FormRecuperar()
+    if form.validate_on_submit():
+        return (render_template("Home.html"))
+        
+    return render_template("RecuperarClave.html", form=form)
+ 
+
+
 @app.route('/HomeUsuAutenticado/')
 def home():
-    return render_template("HomeUsuAtenticado.html")
+    return render_template("HomeUsuAutenticado.html")
 
 @app.route('/CrearProducto/',methods=("GET","POST"))
 def CrearProducto():
@@ -38,4 +48,12 @@ def CrearUsuario():
         flash("usuario creado")
         return ()
     return render_template("CrearUsuario.html",form=form)
+
+@app.route('/modificarproducto/',methods=("GET","POST"))
+def modificarproducto():
+    form=FormModificarProducto()
+    if form.validate_on_submit():
+        sql_modificar_producto(form.nombre.data, form.precio.data, form.cantidad.data, form.descripcion.data)
+        return ()
+    return render_template("modificarproducto.html",form=form)
 

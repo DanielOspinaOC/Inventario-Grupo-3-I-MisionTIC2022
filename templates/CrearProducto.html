@@ -2,13 +2,10 @@
 
 {% block contenido %}  
 
-
-
-
     
-        
+<h1 style="color: rgb(24, 23, 23) ; margin: 0px 500px;">Registrar un producto</h1>   
     <div class="contenedor3" style="margin: 10px 500px ; ">
-        <h1 style="color: rgb(24, 23, 23) ; margin: 0px 500px;">Registrar un producto</h1>
+        
               
         <form action="{{url_for('CrearProducto') }}" method="POST">
             {{ form.hidden_tag() }}

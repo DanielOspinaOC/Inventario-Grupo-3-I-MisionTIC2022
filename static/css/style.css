@@ -178,18 +178,22 @@ li a {
   }
 /*Fin de los estilos de Modificar producto*/
 
-.rec-screen{
+.Recuperar {
+  margin: 20px auto;
+  width: 300px;
+  }
+.rec-screen {
   background-color: rgba(255, 255, 255, 0.39);
-  padding: 10px ;
-  border-radius: 5px ;
+  padding: 20px;
+  border-radius: 5px
+  }
+
+.Recuperar-form{
+
+ text-align: center;
+
 }
-.rec_title{
-  text-align: center;
-  color: rgb(0, 0, 0);
-}
-.recuperarClave{
-  text-align: center;
-}
+
 
 .recuperarClaveButton{
   border: 2px solid transparent;
