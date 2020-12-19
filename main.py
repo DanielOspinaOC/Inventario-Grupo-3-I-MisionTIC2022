@@ -4,7 +4,7 @@ from forms import FormLogin, FormModificarProducto, FormRegistrarUsuario, FormRe
 
 
 app = Flask(__name__)
-app.config.update(SECRET_KEY="mi_llave_secretaa")
+app.config.update(SECRET_KEY="mi_llave_secreta")
 @app.route('/')
 def index():
     return render_template("Home.html")
