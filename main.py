@@ -1,4 +1,4 @@
-from flask import Flask, render_template, flash
+from flask import Flask, render_template, flash, request
 
 from forms import FormLogin, FormModificarProducto, FormRegistrarUsuario, FormRegistrarProducto
 
@@ -27,13 +27,15 @@ def CrearProducto():
     if form.validate_on_submit():
         sql_agregar_producto(form.codigo.data, form.nombre.data, form.precio.data, form.cantidad.data, form.descripcion.data)
         flash("producto creado")
-        return render_template("HomeUsuAutenticado.html")
+        return redirect(request.url)
     return render_template("CrearProducto.html",form=form)
 
 @app.route('/CrearUsuario/',methods=("GET","POST"))
 def CrearUsuario():
     form=FormRegistrarUsuario()
     if form.validate_on_submit():
-        return (render_template("CrearUsuario.html"))
+        sql_agregar_usuario(form.nombre.data, form.email.data, form.usuario.data, form.contraseña.data)
+        flash("usuario creado")
+        return ()
     return render_template("CrearUsuario.html",form=form)
 

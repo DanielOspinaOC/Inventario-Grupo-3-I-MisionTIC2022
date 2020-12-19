@@ -3,30 +3,31 @@
 {% block contenido %}  
 
 
-<h1 style="color: white ; margin: 0px 500px;">Registrar un producto</h1>
+
 
     
         
     <div class="contenedor3" style="margin: 10px 500px ; ">
-
-        <form method="POST" action="/">
+        <h1 style="color: rgb(24, 23, 23) ; margin: 0px 500px;">Registrar un producto</h1>
+              
+        <form action="{{url_for('CrearProducto') }}" method="POST">
             {{ form.hidden_tag() }}
             <h2>Información del producto:</h2>
 
             <p>Codigo del producto:</p>
-            {{ form.nombre (class="inpu")}}
+            {{ form.codigo (class="input")}}
 
             <p>Nombre:</p>
-            {{ form.nombre (class="inpu")}}
+            {{ form.nombre (class="input")}}
 
             <p>Precio:</p>
-            {{ form.precio (class="inpu")}}
+            {{ form.precio (class="input")}}
 
             <p>Cantidad: </p>
-            {{ form.cantidad (class="inpu")}}
+            {{ form.cantidad (class="input")}}
 
             <p>Descripción:</p>
-            {{ form.descripcion (class="inpu")}}
+            {{ form.descripcion (class="input")}}
 
             <h3>Subir nueva imagen:</h3> 
             <div class="contenedor2">

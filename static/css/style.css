@@ -129,7 +129,7 @@ li a {
 
 .contenedor2 {
     width:auto;
-    background-color: rgba(245, 245, 245, 0.938);
+    background-color: rgba(245, 245, 245, 0.26);
     padding: 2%;
     display:inline-block;
     align-self: auto;
@@ -142,7 +142,7 @@ li a {
 
 .contenedor3 {
     width:auto;
-    background-color: rgba(245, 245, 245, 50);
+    background-color: rgba(245, 245, 245, 0.26);
     padding: 2%;
     display:inline-block;
     align-self: right;

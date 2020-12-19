@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Asus\Desktop\Inventario-Grupo-3-I-main\venv"
+VIRTUAL_ENV="C:\Users\dpipe\Desktop\Ciclo 3\Inventario-Grupo-3-I\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
