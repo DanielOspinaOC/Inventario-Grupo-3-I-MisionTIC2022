@@ -9,7 +9,7 @@
         
     <div class="contenedor3" style="margin: 10px 500px ; ">
 
-        <form method="POST" action="{{url_for('home')}}">
+        <form method="POST" action="{{url_for('/modificarproducto/{{productos.0}}')}}">
             {{ form.hidden_tag() }}
             <h2>Información del producto:</h2>
 
