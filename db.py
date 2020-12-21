@@ -1,5 +1,6 @@
 import sqlite3
 from sqlite3 import Error
+import base64
 
 def sql_connection():
     try:
@@ -24,10 +25,6 @@ def sql_agregar_usuario(nombre, email, usuario, contraseña):
     con.commit()
     con.close()
 
-def sql_modificar_producto(nombre, precio, cantidad, descripcion):
-    strsql="insert into productos (nombre, precio, descripcion, cantidad) values ('{nombre}','{precio}','{descripcion}','{cantidad}');"
-    con=sql_connection()
-    cur=con.cursor()
-    cur.execute(strsql)
-    con.commit()
-    con.close()
+
+
+

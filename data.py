@@ -1,4 +1,4 @@
-products = [
+productos = [
 {
   "ref": "0001",
   "name": "celular Xiaomi Note7 64GB",

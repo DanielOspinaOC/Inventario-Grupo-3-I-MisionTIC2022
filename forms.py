@@ -1,8 +1,9 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, SelectField
 from wtforms.validators import DataRequired
 
 class FormModificarProducto (FlaskForm):
+    codigo = StringField('codigo',validators=[DataRequired(message='No dejar vacío, completar')])
     nombre = StringField('nombre',validators=[DataRequired(message='No dejar vacío, completar')])
     precio = StringField('precio', validators=[DataRequired(message='No dejar vacío, completar')])
     cantidad = StringField('cantidad', validators=[DataRequired(message='No dejar vacío, completar')])
@@ -33,7 +34,16 @@ class FormRecuperar(FlaskForm):
     email = StringField('Email', validators=[DataRequired(message='No dejar vacío, completar')])
     enviar = SubmitField('Recuperar')
 
+class FormMostrarProducto (FlaskForm):
+    nombre = StringField('nombre',validators=[DataRequired(message='No dejar vacío, completar')])
+    precio = StringField('precio', validators=[DataRequired(message='No dejar vacío, completar')])
+    cantidad = StringField('cantidad', validators=[DataRequired(message='No dejar vacío, completar')])
+    descripcion = StringField('descripcion', validators=[DataRequired(message='No dejar vacío, completar')])
 
+class FormBuscar (FlaskForm):
+    opciones = [('Codigo')]
+    seleccion = SelectField('Buscar productos:', choices=opciones)
+    buscar = StringField('')
 
 
 

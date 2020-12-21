@@ -15,70 +15,25 @@
      </a>  
     </div>   
     <div class="container">
-       <div class="item">
-        <a href="/modificarproducto"><img src="../static/imagenes/imagen1.png" class="item-img"></a> 
-         <div class="item-text">
-          
-          <h3>celular Xiaomi Note7 64GB</h3>
-          <h5>$1.399000</h5> 
-          <h6>disponible</h6> 
-              
-        </div>       
-    </div>
+      {% for producto in productos %}
     
+      <div class="item" style="display: inline-block;">
 
-    <div class="item">
-      <a href="/modificarproducto"><img src="../static/imagenes/Imagen2.png" class="item-img"></a> 
-        <div class="item-text">
-         <h3>maletas de viajes</h3>         
-         <h5>$1.399000</h5>
-         <h6>disponible</h6> 
-                      
-        </div>               
-    </div>
-
-    <div class="item">
-      <a href="/modificarproducto"><img src="../static/imagenes/Imagen3.png" class="item-img"></a> 
-        <div class="item-text">
-         <h3>Smartwatch Haylou Ls05 Solar Reloj Inteligente 12 Deportes</h3>
-          <h5>$1100.000</h5>
-          <h6>disponible</h6> 
-           
-       </div>
-    </div>
-
-    <div class="item">
-      <a href="/modificarproducto"><img src="../static/imagenes/Imagen4.png" class="item-img"></a> 
-        <div class="item-text">
-         <h3>JXD Singularity S192 una consola Android con el SoC Tegra K1</h3>
-         <h5>$1800.000</h5>
-         <h6>disponible</h6>
-         
-       </div>
-    </div>
-
-    <div class="item">
-      <a href="/modificarproducto"><img src="../static/imagenes/Imagen5.png" class="item-img"></a> 
-        <div class="item-text">
-         <h3>Camara Digital,sistema Android</h3>
-         <h5>$1530.000</h5>
-         <h6>disponible</h6>
-          
-       </div>
-    </div>
-
-    <div class="item">
-      <a href="/modificarproducto"><img src="../static/imagenes/Imagen6.png" class="item-img"></a> 
-        <div class="item-text">
-         <h3>Razer Project Valerie</h3>
-         <h5>$5000.000</h5>
-         <h6>No disponible</h6>
-         
-
-
-       </div>
-       
-    </div>    
-  
+         <div class="item-text">
+          <p>Codigo {{ producto.0 }}</p>
+          <p>Nombre {{ producto.1 }}</p>
+          <p>Precio {{ producto.2 }}</p>
+          <p>Cantidad {{ producto.3 }}</p>
+          <p>Descripcion {{ producto.4 }}</p>
+         </div>
+      
+         <a href="/modificarproducto">
+          <button type="button" style="background:green">   
+          <input type="button" value="Modificar">      </button></a>
+          <button type="button" style="background:red">,
+          <input type="button" value="Eliminar">
+      </div>
+      
+      {%endfor%}
 
 {% endblock %}

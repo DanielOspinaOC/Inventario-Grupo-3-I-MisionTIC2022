@@ -9,10 +9,13 @@
         
     <div class="contenedor3" style="margin: 10px 500px ; ">
 
-        <form method="POST" action="{{url_for('/modificarproducto/{{productos.0}}')}}">
+        <form action="{{url_for('modificarproducto')}}", methods= "POST">
             {{ form.hidden_tag() }}
             <h2>Información del producto:</h2>
-
+            
+            <p>Codigo:</p>
+            {{ form.codigo (class="input")}}
+            
             <p>Nombre:</p>
             {{ form.nombre (class="input")}}
 
@@ -32,7 +35,7 @@
 
             <div class="contenedor2">
 
-            {{form.actualizar(class="btn btn-primary btn-large btn-block")}}            
+            {{form.actualizar(class="btn btn-primary btn-large btn-block")}}        
         </form>
         </div>
     </div>
