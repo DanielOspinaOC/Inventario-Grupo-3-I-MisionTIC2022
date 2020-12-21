@@ -1,4 +1,4 @@
-from flask import Flask, render_template, flash, request, redirect
+from flask import Flask, render_template, flash, request, redirect, url_for
 
 from forms import FormLogin, FormModificarProducto, FormRegistrarUsuario, FormRegistrarProducto, FormRecuperar
 
@@ -32,7 +32,12 @@ def RecuperarClave():
 
 @app.route('/HomeUsuAutenticado/')
 def home():
-    return render_template("HomeUsuAutenticado.html")
+    conection = sqlite3.connect('Inventario.db')
+    cursor = conection.cursor()
+    cursor.execute("SELECT * FROM productos;")
+    productos = cursor.fetchall
+    conection.close()
+    return render_template("HomeUsuAutenticado.html", productos = productos)
 
 @app.route('/CrearProducto/',methods=("GET","POST"))
 def CrearProducto():
@@ -46,28 +51,61 @@ def CrearProducto():
             precio = form.precio.data
             cantidad = form.cantidad.data
             descripcion = form.descripcion.data
-            cursor.execute("INSERT INTO productos (codigo, nombre, precio, cantidad, descripcion) VALUES (?, ?, ?, ?, ?)", (codigo, nombre, precio, cantidad, descripcion))
+            cursor.execute("INSERT INTO productos (codigo, nombre, precio, cantidad, descripcion) VALUES (?, ?, ?, ?, ?);", (codigo, nombre, precio, cantidad, descripcion))
             conection.commit()
             conection.close()
             flash("Se ha agregado el producto satisfactoriamente")
-            return redirect(url_for('añadirproducto'))
+            return redirect(url_for('CrearProducto'))
     else:
         return render_template('CrearProducto.html', form = form)
 
 @app.route('/CrearUsuario/',methods=("GET","POST"))
 def CrearUsuario():
     form=FormRegistrarUsuario()
-    if form.validate_on_submit():
-        sql_agregar_usuario(form.nombre.data, form.email.data, form.usuario.data, form.contraseña.data)
-        flash("usuario creado")
-        return ()
-    return render_template("CrearUsuario.html",form=form)
+    if request.method == 'POST':
+        if form.validate_on_submit():
+            conection = sqlite3.connect('Inventario.db')
+            cursor = conection.cursor()
+            nombre = form.nombre.data
+            email = form.email.data
+            usuario = form.usuario.data
+            contraseña = form.contraseña.data
+            cursor.execute("INSERT INTO usuarios (usuario, email, nombre, contraseña) VALUES (?, ?, ?, ?);", (usuario, email, nombre, contraseña))
+            conection.commit()
+            conection.close()
+            flash("Se ha agregado al usuario satisfactoriamente")
+            return redirect(url_for('CrearUsuario'))
+    else:
+        return render_template('CrearUsuario.html', form = form)
 
-@app.route('/modificarproducto/',methods=("GET","POST"))
-def modificarproducto():
-    form=FormModificarProducto()
-    if form.validate_on_submit():
-        sql_modificar_producto(form.nombre.data, form.precio.data, form.cantidad.data, form.descripcion.data)
-        return ()
-    return render_template("modificarproducto.html",form=form)
+@app.route('/modificarproducto/<string:codigo>', methods= ["GET","POST"])
+def modificarproducto(codigo):
+    form = FormModificarProducto()
+    if request.method == 'POST':
+        if form.validate_on_submit():
+            conection = sqlite3.connect('Inventario.db')
+            cursor = conection.cursor()
+            codigo = form.codigo.data
+            nombre = form.nombre.data
+            precio = form.precio.data
+            cantidad = form.cantidad.data
+            descripcion = form.descripcion.data
+            cursor.execute("UPDATE productos SET nombre = ?, precio = ?, cantidad = ?, descripcion = ? WHERE ref = ?)" (nombre, precio, cantidad, descripcion, codigo))
+            conection.commit()
+            conection.close()
+            flash("Se ha modificado el producto satisfactoriamente")
+            return redirect(url_for('HomeUsuAutenticado'))
+    else:
+        return render_template('modificarproducto.html', form = form)
+
+@app.route('/eliminarproducto/<string:codigo>')
+def eliminarproducto(codigo):
+    conection = sqlite3.connect('Inventario.db')
+    cursor = conection.cursor()
+    cursor.execute("DELETE FROM productos WHERE ref= ?", (codigo))
+    conection.commit()
+    conection.close()
+    flash("Se ha eliminado el producto satisfactoriamente")
+    return redirect(url_for('HomeUsuAutenticado'))
+
 

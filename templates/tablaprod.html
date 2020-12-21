@@ -1,0 +1,38 @@
+
+
+{% block title %}Inicio{%endblock %}
+
+{% block content %}
+<div class="container" style="margin-top: 100px;">
+    <p>Bienvenidos {{session["username"]}}</p>
+
+
+    <table class="table">
+        <thead>
+
+
+            <tr>
+                <th>referencia</th>
+                <th>nombre</th>
+                <th>cantidad</th>
+                                
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in products %}
+            <tr>
+                <td>{{ p["ref"] }}</td>
+                <td>{{ p["name"] }}</td>                
+                <td>{{ p["cantidad"] }}</td>
+                <td>
+
+                    <img src="{{ p['img_url'] }}" width="30px" height="30px" />
+                    <p><a href="{{ url_for('product', id=p['ref']) }}">ver Detalle</a></p> 
+                </td>               
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endfor %}
