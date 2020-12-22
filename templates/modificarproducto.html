@@ -9,12 +9,12 @@
         
     <div class="contenedor3" style="margin: 10px 500px ; ">
 
-        <form action="{{url_for('modificarproducto')}}", methods= "POST">
+        <form action="{{url_for('modificarproducto({{ form.codigo.data }})')}}", methods= "POST">
             {{ form.hidden_tag() }}
             <h2>Información del producto:</h2>
             {% if session.get("usuarios").get("rol")=="adm" %}
             <p>Codigo:</p>
-            {{ form.codigo (class="inpu")}}
+            {{ form.codigo.data }}
             
             <p>Nombre:</p>
             {{ form.nombre (class="inpu")}}
