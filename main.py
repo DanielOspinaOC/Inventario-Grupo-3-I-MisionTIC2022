@@ -135,8 +135,8 @@ def CrearUsuario():
     else:
         return render_template('CrearUsuario.html', form = form)
 
-@app.route('/modificarproducto/', methods= ("GET","POST"))
-def modificarproducto():
+@app.route('/modificarproducto/<string:codigo>', methods= ("GET","POST"))
+def modificarproducto(codigo):
     if not session.get("usuarios"):
         return redirect(url_for("index"))
     form = FormModificarProducto()
