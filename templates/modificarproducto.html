@@ -14,24 +14,22 @@
             <h2>Información del producto:</h2>
             {% if session.get("usuarios").get("rol")=="adm" %}
             <p>Codigo:</p>
-            {{ form.codigo (class="input")}}
+            {{ form.codigo (class="inpu")}}
             
             <p>Nombre:</p>
-            {{ form.nombre (class="input")}}
+            {{ form.nombre (class="inpu")}}
 
             <p>Precio:</p>
-            {{ form.precio (class="input")}}
+            {{ form.precio (class="inpu")}}
             {% endif %}
             <p>Cantidad: </p>
-            {{ form.cantidad (class="input")}}
+            {{ form.cantidad (class="inpu")}}
             {% if session.get("usuarios").get("rol")=="adm" %}
             <p>Descripción:</p>
-            {{ form.descripcion (class="input")}}
+            {{ form.descripcion (class="inpu")}}
 
             <h3>Subir nueva imagen:</h3> 
-            <div class="contenedor2">
-                <img src="{{ url_for ('static', filename='img/subir.jpg')}}" width="100">
-            </div>
+            {{ form.imagen }}
             {% endif %} 
             <div class="contenedor2">
 
