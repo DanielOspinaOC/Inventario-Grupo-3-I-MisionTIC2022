@@ -8,6 +8,7 @@ class FormModificarProducto (FlaskForm):
     precio = StringField('precio', validators=[DataRequired(message='No dejar vacío, completar')])
     cantidad = StringField('cantidad', validators=[DataRequired(message='No dejar vacío, completar')])
     descripcion = StringField('descripcion', validators=[DataRequired(message='No dejar vacío, completar')])
+    imagen = FileField('imagen')
     actualizar = SubmitField('Actualizar')
 
 class FormRegistrarProducto (FlaskForm):
@@ -16,7 +17,7 @@ class FormRegistrarProducto (FlaskForm):
     precio = StringField('precio', validators=[DataRequired(message='No dejar vacío, completar')])
     cantidad = StringField('cantidad', validators=[DataRequired(message='No dejar vacío, completar')])
     descripcion = StringField('descripcion', validators=[DataRequired(message='No dejar vacío, completar')])
-    registrar = SubmitField('registrar')    
+    registrar = SubmitField('registrar')
 
 class FormRegistrarUsuario(FlaskForm):
     nombre = StringField('Nombre', validators=[DataRequired(message='No dejar vacío, completar')])
