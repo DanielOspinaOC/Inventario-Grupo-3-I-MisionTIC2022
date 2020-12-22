@@ -148,7 +148,7 @@ def modificarproducto(codigo):
         precio = form.precio.data
         cantidad = form.cantidad.data
         descripcion = form.descripcion.data
-        cursor.execute("UPDATE productos SET nombre = ?, precio = ?, cantidad = ?, descripcion = ?, ref = ?)" (nombre, precio, cantidad, descripcion, codigo))
+        cursor.execute("UPDATE productos (nombre, precio, cantidad, descripcion) SET (nombre = ?, precio = ?, cantidad = ?, descripcion = ?) WHERE ref = ?)", (nombre, precio, cantidad, descripcion, codigo))
         conection.commit()
         conection.close()
         flash("Se ha modificado el producto satisfactoriamente")
