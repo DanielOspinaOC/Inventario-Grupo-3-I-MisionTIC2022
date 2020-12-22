@@ -39,6 +39,9 @@ def RecuperarClave():
 
 @app.route('/HomeUsuAutenticado/')
 def home():
+    if not session.get("usuarios"):
+        return redirect(url_for("index"))
+        
     conection = sqlite3.connect('Inventario.db')
     cursor = conection.cursor()
     cursor.execute("SELECT * FROM productos;")
