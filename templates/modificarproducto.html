@@ -12,7 +12,7 @@
         <form action="{{url_for('modificarproducto')}}", methods= "POST">
             {{ form.hidden_tag() }}
             <h2>Información del producto:</h2>
-            
+            {% if session.get("usuarios").get("rol")=="adm" %}
             <p>Codigo:</p>
             {{ form.codigo (class="input")}}
             
@@ -21,10 +21,10 @@
 
             <p>Precio:</p>
             {{ form.precio (class="input")}}
-
+            {% endif %}
             <p>Cantidad: </p>
             {{ form.cantidad (class="input")}}
-
+            {% if session.get("usuarios").get("rol")=="adm" %}
             <p>Descripción:</p>
             {{ form.descripcion (class="input")}}
 
@@ -32,7 +32,7 @@
             <div class="contenedor2">
                 <img src="{{ url_for ('static', filename='img/subir.jpg')}}" width="100">
             </div>
-
+            {% endif %} 
             <div class="contenedor2">
 
             {{form.actualizar(class="btn btn-primary btn-large btn-block")}}        

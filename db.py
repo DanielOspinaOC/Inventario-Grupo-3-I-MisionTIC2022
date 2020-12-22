@@ -25,6 +25,23 @@ def sql_agregar_usuario(nombre, email, usuario, contraseña):
     con.commit()
     con.close()
 
+def sql_select_user_injection(usuario, contraseña):
+    strsql = f"select *from Usuarios where (usuario='{usuario}' and contraseña = '{contraseña}')"
+    con = sqlite3.connect("Inventario.db")
+    cur=con.cursor()
+    cur.execute(strsql)
+    resultado = cur.fetchone()
+    con.close()
 
+    return resultado
 
+def sql_select_user_no_injection(usuario):
+    strsql = "select *from Usuarios where (usuario=?)"
+    con = sqlite3.connect("Inventario.db")
+    cur=con.cursor()
+    cur.execute(strsql, (usuario,))
+    resultado = cur.fetchone()
+    con.close()
+
+    return resultado
 

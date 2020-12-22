@@ -23,6 +23,8 @@ class FormRegistrarUsuario(FlaskForm):
     email = StringField('Email', validators=[DataRequired(message='No dejar vacío, completar')])
     usuario = StringField('Usuario', validators=[DataRequired(message='No dejar vacío, completar')])
     contraseña = PasswordField('Contraseña', validators=[DataRequired(message='No dejar vacío, completar')])
+    opciones = [('vend'),('adm')]
+    rol = SelectField('Rol', choices=opciones)
     enviar = SubmitField('Registrar')
 
 class FormLogin(FlaskForm):

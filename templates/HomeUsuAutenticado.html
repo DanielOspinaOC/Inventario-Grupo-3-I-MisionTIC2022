@@ -3,8 +3,12 @@
 {% block contenido %} 
   <div id="menu">
      <ul>
-     <li> <a href="/CrearUsuario/">Crear Usuario </a></li>
-     <li> <a href="/CrearProducto/">Crear Nuevo Producto</a></li>                  
+    {% if session.get("usuarios").get("rol") == "adm" %}
+      <p> <a href="/CrearUsuario/">Crear Usuario </a></p>
+      <p> <a href="/CrearProducto/">Crear Nuevo Producto</a></p>   
+    {% endif %}
+
+     <li> <a href="/logout/">Cerrar Sesión</a></li>               
       </ul>
   </div>
     
@@ -30,8 +34,10 @@
          <a href="/modificarproducto">
           <button type="button" style="background:green">   
           <input type="button" value="Modificar">      </button></a>
+        {% if session.get("usuarios").get("rol")=="adm" %}  
           <button type="button" style="background:red">,
           <input type="button" value="Eliminar">
+        {% endif %}
       </div>
       
       {%endfor%}
